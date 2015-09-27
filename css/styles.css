@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "Arial Narrow";
+  src: url("fonts/arrialnarrow-bold.ttf");
+}
+/** <mixin>  **/
+/** </mixin>  **/
+/** GENERAL **/
+/*.clearfix*/
+/*clear both*/
+/***/
+/*outline none*/
+/*#header, #menu, #content, #footer*/
+/*docSize()*/
+* {
+  font-family: "Arrial Narrow";
+}
+a.button.readmore {
+  display: block;
+  background-color: #26201f;
+  width: 210px;
+  padding: 8px 0;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  text-align: center;
+}
+/** HEADER  **/
+#header {
+  background-image: url("../img/header.png");
+  background-repeat: repeat-x;
+  height: 241px;
+}
+/** CONTENT **/
+#menu {
+  margin-top: -2px;
+  margin-bottom: 0;
+  border: 0;
+  background-color: #1b9a72;
+}
+#menu button.navbar-toggle {
+  background: #c3c8ca;
+  border: 1px solid #c3c8ca;
+  cursor: pointer;
+}
+#menu .navbar-collapse.collapse.in {
+  border-color: #c3c8ca;
+}
+#menu a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+#menu li.active {
+  border: 10px solid #e7e7e7;
+  margin-top: 0;
+  border-right: 0;
+  border-left: 0;
+  background: #e7e7e7;
+}
+#menu li.active a {
+  color: #000;
+}
+@media (min-width: 768px) {
+  .navbar-collapse.collapse {
+    display: flex !important;
+    justify-content: center;
+  }
+  .navbar-collapse.collapse li {
+    border-right: 1px solid #7ebb97;
+  }
+  .navbar-collapse.collapse li:last-child {
+    border-right: 0;
+  }
+  .navbar-nav>li {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .navbar-nav>li>a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+#slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #eaebec;
+  padding: 20px 0;
+  height: 514px;
+  padding-bottom: 20px;
+/*#light-slider*/
+/*flexStyle('row')*/
+/*width 100% !important*/
+/*li*/
+/*width 10%*/
+}
+.slide-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 340px;
+  color: #0a664c;
+}
+.slide-point p {
+  height: 100px;
+  text-align: justify;
+  padding: 0 25px;
+  line-height: 24px;
+  font-size: 16px;
+  margin: 0 0 70px 0;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  #slider {
+    display: inline-block;
+    overflow: hidden;
+  }
+  #slider ul {
+    display: flex;
+    flex-direction: row;
+    width: 300% !important;
+  }
+  #slider .slide-point {
+    align-items: center;
+    width: 40%;
+  }
+}
+#content {
+  display: flex;
+  flex-direction: column;
+}
+#content #description p {
+  padding: 20px 40px;
+  line-height: 25px;
+  font-weight: bold;
+}
+#bottom--menu {
+  display: flex;
+  flex-direction: row;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px 30px;
+}
+#bottom--menu .rest-navpoint img,
+#bottom--menu .rest-navpoint .button {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+#bottom--menu .rest-navpoint .button {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 14px;
+}
+@media (max-width: 710px) {
+  #bottom--menu {
+    flex-direction: column;
+  }
+  #bottom--menu .rest-navpoint {
+    display: block;
+  }
+  #bottom--menu .rest-navpoint img {
+    display: none;
+  }
+  #bottom--menu .rest-navpoint a.button {
+/*display none*/
+    width: 90%;
+  }
+}
+/** FOOTER  **/
+#footer * {
+  color: #fff;
+}
+#footer .innerWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #26201f;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+#footer .innerWrapper h4 {
+  display: inline;
+  margin-right: 50px;
+}
+#footer .innerWrapper #col-center h3 {
+  text-align: center;
+}
+#footer .innerWrapper #col-center #social_list {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+}
+#footer .innerWrapper #col-center #social_list li {
+  margin-right: 15px;
+}
+#footer .innerWrapper #col-right > div:first-child {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #fff;
+}
+#footer .innerWrapper #col-right > div:first-child > * {
+  padding: 0 10px;
+}
+#footer .innerWrapper #col-right > div:first-child #phone {
+  border-left: 1px solid #fff;
+}
+#footer .innerWrapper #col-right #fake img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  #footer .innerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #footer .innerWrapper #col-left {
+    margin-left: 50px;
+  }
+}

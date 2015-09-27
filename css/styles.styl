@@ -1,0 +1,227 @@
+@font-face
+  font-family "Arial Narrow" /* Имя шрифта */
+  src url(fonts/arrialnarrow-bold.ttf) /* Путь к файлу со шрифтом */
+
+
+collapseButtonColor = #c3c8ca
+
+
+/** <mixin>  **/
+
+borderNullification()
+  padding 0
+  margin 0
+
+docSize()
+  width 1024px
+
+flexStyle(dir)
+  display flex
+
+  if dir == 'row'
+    flex-direction row
+  else if dir == 'revers-row'
+    flex-direction row-reverse
+  else if dir == 'col'
+    flex-direction column
+  else if dir == 'revers-col'
+    flex-direction column-reverse
+
+menuStyle()
+  flexStyle('row')
+  borderNullification()
+  list-style none
+
+centrify()
+  margin 0 auto
+
+/** </mixin>  **/
+
+/** GENERAL **/
+
+/*.clearfix*/
+  /*clear both*/
+
+/***/
+  /*outline none*/
+
+  /*#header, #menu, #content, #footer*/
+    /*docSize()*/
+
+*
+  font-family "Arrial Narrow"
+
+body
+  /*borderNullification()*/
+  /*& > **/
+    /*centrify()*/
+
+a.button.readmore
+  display block
+  background-color #26201f
+  width 210px
+  padding 8px 0
+  font-size 18px
+  color white
+  text-decoration none
+  border-radius 12px
+  text-align center
+
+/** HEADER  **/
+
+#header
+  background-image url("../img/header.png")
+  background-repeat repeat-x
+  height 241px
+
+/** CONTENT **/
+#menu
+  margin-top -2px
+  margin-bottom 0
+  border 0
+  background-color #1b9a72
+  button.navbar-toggle
+    background collapseButtonColor
+    border 1px solid collapseButtonColor
+    cursor pointer
+  .navbar-collapse.collapse.in
+    border-color collapseButtonColor
+  a
+    color white
+    font-size 20px
+    font-weight bold
+  li.active
+    border: 10px solid #e7e7e7;
+    margin-top: 0;
+    border-right: 0;
+    border-left: 0;
+    background: #e7e7e7;
+    a
+      color: black
+@media (min-width: 768px)
+  .navbar-collapse.collapse
+    display flex !important
+    justify-content center
+    li
+      border-right 1px solid #7ebb97
+    li:last-child
+      border-right 0
+  .navbar-nav>li
+    margin-top 10px
+    padding-left 10px
+    padding-right 10px
+    &>a
+      padding-top 5px
+      padding-bottom 5px
+
+#slider
+  flexStyle('row', #000)
+  justify-content space-around
+  background-color #eaebec
+  padding 20px 0
+  height 514px
+  padding-bottom 20px
+  /*#light-slider*/
+    /*flexStyle('row')*/
+    /*width 100% !important*/
+    /*li*/
+      /*width 10%*/
+ .slide-point
+   flexStyle('col')
+   align-items center
+   width 340px
+   color #0a664c
+   p
+     height 100px
+     text-align justify
+     padding 0 25px
+     line-height 24px
+     font-size 16px
+     margin 0 0 70px 0
+     width 100%
+@media (max-width: 767px)
+  #slider
+    display inline-block
+    overflow hidden
+    ul
+      display flex
+      flex-direction row
+      width 300% !important
+    .slide-point
+      align-items center
+      width 40%   /*@debug*/
+
+#content
+  flexStyle('col')
+
+  #description
+    p
+      padding 20px 40px
+      line-height 25px
+      font-weight bold
+
+#bottom--menu
+  flexStyle('row')
+  flex-direction row
+  justify-content space-around
+  padding 50px 30px
+  .rest-navpoint
+    img, .button
+      margin-top 10px
+      margin-left 30px
+    .button
+      padding-left 10px
+      padding-right 10px
+      margin-left 14px
+@media (max-width: 710px)
+  #bottom--menu
+    flex-direction column
+    .rest-navpoint
+      display: block
+      img
+        display none
+      a.button
+        /*display none*/
+        width 90%
+
+
+/** FOOTER  **/
+
+#footer
+  *
+    color white
+  .innerWrapper
+    flexStyle('row')
+    justify-content space-around
+    background-color #26201f
+    padding-top 20px
+    padding-bottom 50px
+    h4
+      display inline
+      margin-right 50px
+    #col-center
+      h3
+        text-align center
+      #social_list
+        menuStyle()
+        justify-content center
+        li
+          margin-right 15px
+    #col-right
+      & > div:first-child
+        flexStyle('row')
+        border-bottom 1px solid white
+        & > *
+          padding 0 10px
+        #phone
+          border-left 1px solid white
+      #fake
+        img
+          width 100%
+@media (max-width: 768px)
+  #footer
+    .innerWrapper
+      flexStyle('col')
+      align-items center
+      #col-left
+        margin-left 50px

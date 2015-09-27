@@ -1,0 +1,155 @@
+/** <mixin>  **/
+
+borderNullification()
+  padding 0
+  margin 0
+
+docSize()
+  width 1024px
+
+flexStyle(dir)
+  display flex
+
+  if dir == 'row'
+    flex-direction row
+  else if dir == 'revers-row'
+    flex-direction row-reverse
+  else if dir == 'col'
+    flex-direction column
+  else if dir == 'revers-col'
+    flex-direction column-reverse
+
+menuStyle()
+  flexStyle('row')
+  borderNullification()
+  list-style none
+
+centrify()
+  margin 0 auto
+
+/** </mixin>  **/
+
+/** GENERAL **/
+
+.clearfix
+  clear both
+
+*
+  outline none
+
+#header, #menu, #content, #footer
+  docSize()
+
+body
+  borderNullification()
+  flexStyle('col')
+  & > *
+    centrify()
+
+a.button.readmore
+  display block
+  background-color #26201f
+  width 160px
+  padding 8px 0
+  font-size 18px
+  color white
+  text-decoration none
+  border-radius 12px
+  text-align center
+  margin 0 auto
+
+/** HEADER  **/
+
+#header
+  background-image url("../img/header.png")
+  height 241px
+
+#menu
+  ul
+    menuStyle()
+    justify-content center
+    align-items center
+    /*height 70px*/
+    padding 12px 0
+    background #1b9a72
+    li
+      float left
+      padding 10px 50px
+      border-right 1px solid #7ebb97
+      &:last-child
+        border 0
+      a
+        font-size 19px
+        text-decoration none
+        font-weight bold
+        color #ffffff
+
+/** CONTENT **/
+
+#slider
+  flexStyle('row', #000)
+  justify-content space-around
+  background-color #eaebec
+  padding 20px 0
+  .slide-point
+    flexStyle('col')
+    align-items center
+    width 340px
+    color #0a664c
+    p
+      height 100px
+      text-align justify
+      padding 0 25px
+      line-height 24px
+      font-size 16px
+      margin 0 0 70px 0
+      width 70%
+
+#content
+  flexStyle('col')
+
+#description
+  p
+    padding 20px 40px
+    line-height 25px
+    font-weight bold
+
+#bottom--menu
+  flexStyle('row')
+  justify-content space-around
+  padding 50px 30px
+  .rest-navpoint
+    img, .button
+      margin-top 10px
+      margin-left 17px
+    .button
+      padding-left 10px
+      padding-right 10px
+      margin-left 14px
+
+/** FOOTER  **/
+
+#footer
+  *
+    color white
+  .innerWrapper
+    flexStyle('row')
+    justify-content space-around
+    background-color #26201f
+    padding-top 20px
+    padding-bottom 50px
+    h4
+      display inline
+      margin-right 50px
+    #social_list
+      menuStyle()
+      li
+        margin-right 15px
+    #col-right
+      & > div:first-child
+        flexStyle('row')
+        border-bottom 1px solid white
+        & > *
+          padding 0 10px
+        #phone
+          border-left 1px solid white

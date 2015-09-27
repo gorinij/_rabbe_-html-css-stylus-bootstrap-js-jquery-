@@ -1,0 +1,81 @@
+#slider .slide-point, #bottom--menu .rest-navpoint, #footer .innerWrapper div, #social_list li {
+    float: left;
+}
+
+#description, #footer, .innerWrapper, #social_list {
+    clear: both;
+}
+
+img {
+    border: 0;
+}
+
+#footer .innerWrapper {
+    height: 110px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#menu ul {
+    height: 34px;
+    padding-left: 50px;
+}
+
+#slider {
+    height: 472px;
+}
+
+#slider .button.readmore {
+    float: left;
+}
+
+#slider .slide-point p {
+    padding: 0;
+    margin-left: 60px !important;
+}
+
+#slider .slide-point * {
+    margin-left: 70px !important;
+}
+
+#slider .slide-point h3, #slider .button.readmore {
+    margin-left: 100px !important;
+}
+
+.rest-navpoint {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#content {
+    margin-bottom: 210px;
+}
+
+#col-right {
+    float: right !important;
+}
+#col-right > div {
+    float: right;
+    display: block;
+    clear: both;
+}
+
+
+@media (max-width: 910px) {
+    * {
+        display: none;
+    }
+    #bottom--menu {
+        flex-direction: column !important;
+    }
+    #bottom--menu .rest-navpoint {
+        display: block !important;
+    }
+    #bottom--menu .rest-navpoint img {
+        display: none !important;
+    }
+    #bottom--menu .rest-navpoint img a.button {
+        /*display none*/
+        width: 90% !important;
+    }
+}
